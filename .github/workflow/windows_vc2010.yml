@@ -1,0 +1,16 @@
+name: 'MSVC 2019'
+
+on:
+  push:
+    branches: master
+    paths: 'src/*'
+
+jobs:
+  build:
+    name: 'build MSVC 2019'
+    runs-on: windows-latest
+    steps:
+      - name: "complie src"
+        run: 
+          echo "Hello World“
+          g++ test.cpp -static -O2 -o githubAction-release-x64.exe; ./githubAction-release-x64.exe
