@@ -12,9 +12,5 @@ jobs:
       - name: "complie src"
         run: |
           echo "set environment"
-          ls > echo
-          ls .. > echo
-          ls .... > echo
-          g++ --version
-          g++ ../main.cpp -o main
-          ./main
+          cmake --build .
+          ./githubAction
