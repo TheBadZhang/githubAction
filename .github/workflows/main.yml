@@ -12,7 +12,9 @@ jobs:
       - name: "complie src"
         run: |
           echo "set environment"
-          echo $(get-location)
+          ls > echo
+          ls .. > echo
+          ls .... > echo
           g++ --version
           g++ ../main.cpp -o main
           ./main
