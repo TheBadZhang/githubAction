@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: 'build MSVC 2019'
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: "complie src"
         run: |
