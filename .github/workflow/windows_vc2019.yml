@@ -1,0 +1,18 @@
+name: 'MSVC 2019'
+
+on:
+  push:
+    branches: master
+    paths: 'src/*'
+
+jobs:
+  build:
+    name: 'build MSVC 2019'
+    runs-on: windows-latest
+    steps:
+      - name: "complie src"
+        run: 
+          echo "set environment"
+          call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat"
+          g++ main.cpp -static -O2 -o githubAction-release-x64.exe; ./githubAction-release-x64.exe
+          cl main.cpp; ./main.exe
