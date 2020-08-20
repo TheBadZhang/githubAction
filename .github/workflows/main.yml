@@ -10,9 +10,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: "complie src"
-        run: 
-          echo "set environment";
+        run: |
+          echo "set environment"
+          echo $(get-location)
           cmake .
           make
           ./githubAction-release
-          # g++ ./main.cpp -o ./main.exe; ./main.exe;
