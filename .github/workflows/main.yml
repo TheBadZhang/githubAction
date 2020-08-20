@@ -12,6 +12,7 @@ jobs:
       - name: "complie src"
         run: 
           echo "set environment";
+          ls;
           cmd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat";
           g++ main.cpp -static -O2 -o githubAction-release-x64.exe; ./githubAction-release-x64.exe;
           cl main.cpp; ./main.exe;
