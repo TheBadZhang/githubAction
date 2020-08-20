@@ -13,6 +13,6 @@ jobs:
         run: |
           echo "set environment"
           echo $(get-location)
-          cmake ../
-          make
-          ./githubAction-release
+          g++ --version
+          g++ ./main.cpp -o main
+          ./main
