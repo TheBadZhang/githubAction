@@ -14,5 +14,5 @@ jobs:
           echo "set environment"
           echo $(get-location)
           g++ --version
-          g++ ./main.cpp -o main
+          g++ ../main.cpp -o main
           ./main
