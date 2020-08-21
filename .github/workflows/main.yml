@@ -10,5 +10,5 @@ jobs:
       - name: "complie src"
         run: |
           echo "set environment"
-          g++ ./main.cpp -o main
+          g++ *.cpp -o main
           ./main
