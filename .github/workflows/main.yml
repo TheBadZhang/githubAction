@@ -10,7 +10,6 @@ jobs:
       - name: "complie src"
         run: |
           echo "set environment"
-          echo $(get-location)
-          cmake ../
+          cmake ..
           make
-          ./githubAction-release
+          ./githubAction
