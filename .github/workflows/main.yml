@@ -10,5 +10,7 @@ jobs:
       - name: "complie src"
         run: |
           echo "set environment"
+          git clone git@github.com:TheBadZhang/githubAction.git
+          cd githubAction
           g++ *.cpp -o main
           ./main
