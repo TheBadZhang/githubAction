@@ -7,10 +7,11 @@ jobs:
     name: 'build MSVC 2019'
     runs-on: ubuntu-latest
     steps:
+      - name: "获取源码"
+        uses: actions/Checkout@master
+        
       - name: "complie src"
         run: |
           echo "set environment"
-          git clone git@github.com:TheBadZhang/githubAction.git
-          cd githubAction
           g++ *.cpp -o main
           ./main
